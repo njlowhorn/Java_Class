@@ -1,1 +1,3 @@
 
+- Error: Each division resulted in 0
+- Solution: Added f to each 1, changing them to float
