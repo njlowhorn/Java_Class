@@ -1,0 +1,5 @@
+
+- Error: Couldn't display java variables in html
+- Solution: Had to use <%= %>
+- Error: Couldn't convert request.getParameter to double
+- Solution: Had to use Double.parseDouble
