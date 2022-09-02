@@ -1,1 +1,3 @@
 
+Error: Couldn't properly get second digit
+Solution: Got the remainder after dividing by 100 and divided that by 10
