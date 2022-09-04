@@ -8,7 +8,7 @@
     </head>
     <body>
            
-        <form action="entry.jsp">
+        <form action="conversion.jsp">
              
             <!-- Can enter value and press button to go to next page --->
             <p>Enter a length in feet: <input type="double" name="feet"> 
