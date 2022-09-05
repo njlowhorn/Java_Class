@@ -1,0 +1,3 @@
+
+- Error: Was printing new line at every 11th character instead of 10th
+- Solution: Added space before ! and changed i to start at 1 instead of 0
