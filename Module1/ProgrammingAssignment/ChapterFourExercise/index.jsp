@@ -10,7 +10,7 @@
         
         <form action="statement.jsp">
              
-            <!--  --->
+            <!-- Prints all information --->
             <p>Employee's Name: <input type="string" name="employeeName"> 
             <p>Number of Hours Worked: <input type="double" name="employeeHours"> 
             <p>Hourly Pay Rate: <input type="double" name="employeePayRate"> 
