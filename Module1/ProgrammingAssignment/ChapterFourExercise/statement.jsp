@@ -1,6 +1,5 @@
 
 <%@page import="java.text.DecimalFormat"%>
-<%@page import="java.math.BigDecimal"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -10,22 +9,22 @@
     </head>
     <body>
         
-        <!--  -->
+        <!-- Gets all information -->
         <% String employeeName = request.getParameter("employeeName");
         double employeeHours = Double.parseDouble(request.getParameter("employeeHours"));
         double employeePayRate = Double.parseDouble(request.getParameter("employeePayRate"));
-        
         double taxFederal = Double.parseDouble(request.getParameter("taxFederal"));
         double taxState = Double.parseDouble(request.getParameter("taxState"));
-        
+        // Calculates total pay and deductions
         double payGross = employeeHours * employeePayRate;
         double deductionFederal = payGross * taxFederal;
         double deductionState = payGross * taxState;
         double deductionTotal = deductionFederal + deductionState;
         double payNet = payGross - deductionTotal;
-        
+        // Changes doubles to have the format of 2 decimal places
         DecimalFormat df = new DecimalFormat("#.00");%>
         
+        <!-- Prints all information -->
         <p>Employee Name: <%= employeeName %></p>
         <p>Hours Worked: <%= employeeHours %></p>
         <p>Pay Rate: $<%= df.format(employeePayRate) %></p>
