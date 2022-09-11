@@ -1,0 +1,86 @@
+
+package grades;
+import java.util.Arrays;
+import java.util.Scanner;
+
+/**
+ *
+ * @author soitguest
+ */
+public class Grades {
+
+    /**
+     * 
+     * @param args 
+     */
+    public static void main(String[] args) {
+        Grades grades = new Grades();
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter the number of students: ");
+        int studentNumber = keyboard.nextInt();
+        
+        System.out.print("Enter the scores of each student: ");
+        int[] studentScores = new int[studentNumber];
+        for(int score = 0; score < studentNumber; score++){
+            studentScores[score] = keyboard.nextInt();
+        }
+        
+        grades.calculateGrades(studentScores);
+        
+        /**System.out.print("Enter the scores of each student: ");
+        String studentScoresString = keyboard.nextLine();
+        
+        String[] studentScoreArray = studentScoresString.split("\s");
+        
+        for(String string: studentScoreArray){
+            Integer.parseInt(string);
+            
+        }**/
+        
+        
+        //System.out.println(studentScores);        
+    }
+    
+    public String[] calculateGrades (int[] scoreArray){
+        int[] orderedScoreArray = scoreArray;
+        Arrays.sort(orderedScoreArray);
+        int highestScore = orderedScoreArray[orderedScoreArray.length-1];
+        
+        for(int score: scoreArray){
+            for(int student = 0; student < scoreArray.length; student ++){
+                if(score >= highestScore-10){
+                    System.out.println("Student " + student + " score is " + score + " and grade is A.");
+                }
+                else if(score >= highestScore-20){
+                    String gradeStatement = ("Student " + student + " score is " + score + " and grade is B.");
+                    return gradeStatement;
+                }
+                else if(score >= highestScore-30){
+                    String gradeStatement = ("Student " + student + " score is " + score + " and grade is C.");
+                    return gradeStatement;
+                }
+                else if(score >= highestScore-40){
+                    String gradeStatement = ("Student " + student + " score is " + score + " and grade is D.");
+                    return gradeStatement;
+                }
+                else{
+                    String gradeStatement = ("Student " + student + " score is " + score + " and grade is F.");
+                    return gradeStatement;
+                }
+            }
+        }
+        return "1";
+    }
+    
+    
+    /**public int[] stringToInegerArray(String originalString){
+       String[] stringArray = originalString.split("\s");
+       int[] intArray = new int[stringArray.length];
+       
+       for(String string: stringArray){
+           Integer.parseInt(string);
+           intArray.
+       }
+    }**/
+    
+}
