@@ -1,0 +1,49 @@
+
+package employee;
+import java.util.Scanner;
+
+/**
+ *
+ * @author soitguest
+ */
+public class Employee {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Employee employeeObject = new Employee();
+        Scanner keyboard = new Scanner(System.in);
+        
+        // 
+        System.out.print("Enter the number of employees: ");
+        int employeeNumber = keyboard.nextInt();
+        
+        int[][] employeeHours = new int[employeeNumber][7];
+        
+        for(int employee = 0; employee < employeeNumber; employee++){
+            System.out.print("Enter the number of hours worked each day (Sunday-Saturday) by employee " + (employee + 1) + ": ");
+            
+            for(int hours = 0; hours < 7; hours++){
+                employeeHours[employee][hours] = keyboard.nextInt();
+            } 
+        }
+        
+        int[] employeeTotalHours = employeeObject.calculateTotalHours(employeeHours, employeeNumber);
+        
+        System.out.println(employeeTotalHours);
+    }
+    
+    public int[] calculateTotalHours(int[][] employeeHours, int employeeNumber) {
+        
+        int[] employeeTotalHours = new int[employeeNumber];
+        
+        for(int employee = 0; employee < employeeNumber; employee++){
+            employeeTotalHours[employee] = employeeHours[employee][0] + employeeHours[employee][1] + employeeHours[employee][2] + 
+                                           employeeHours[employee][3] + employeeHours[employee][4] + employeeHours[employee][5] +
+                                           employeeHours[employee][6]; 
+        }
+        return employeeTotalHours;
+    }
+    
+}
