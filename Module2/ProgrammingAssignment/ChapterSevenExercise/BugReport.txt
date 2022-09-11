@@ -1,1 +1,3 @@
 
+- Error: program kept printing the first score
+- Solution: got rid of foreach loop for the scores, replaced with setting the score equal to value within array
