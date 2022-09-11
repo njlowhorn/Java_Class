@@ -33,22 +33,27 @@ public class Employee {
         int[][] employeeTotalHours = employeeObject.calculateTotalHours(employeeHours, employeeNumber);
         
         for(int employee = employeeTotalHours.length - 1; employee > -1; employee--){
-            System.out.println("Employee " + employeeTotalHours[employee][0] + " total hours is " + employeeTotalHours[employee][1]);
+            System.out.println("Employee " + (employeeTotalHours[employee][0] + 1) + " total hours is " + employeeTotalHours[employee][1]);
         }
     }
     
     public int[][] calculateTotalHours(int[][] employeeHours, int employeeNumber) {
         
+        int[] employeeTotalHoursSingle = new int[employeeNumber];
         int[][] employeeTotalHours = new int[employeeNumber][2];
         
         for(int employee = 0; employee < employeeNumber; employee++){
             employeeTotalHours[employee][0] = employee;
-            employeeTotalHours[employee][1] = employeeHours[employee][0] + employeeHours[employee][1] + employeeHours[employee][2] + 
-                                              employeeHours[employee][3] + employeeHours[employee][4] + employeeHours[employee][5] +
-                                              employeeHours[employee][6]; 
+            employeeTotalHoursSingle[employee] = employeeHours[employee][0] + employeeHours[employee][1] + employeeHours[employee][2] + 
+                                                 employeeHours[employee][3] + employeeHours[employee][4] + employeeHours[employee][5] +
+                                                 employeeHours[employee][6];    
         }
         
-        Arrays.sort(employeeTotalHours);
+        Arrays.sort(employeeTotalHoursSingle);
+        
+        for(int total = 0; total < employeeNumber; total++){
+            employeeTotalHours[total][1] = employee;
+        }
         
         return employeeTotalHours;
     }
