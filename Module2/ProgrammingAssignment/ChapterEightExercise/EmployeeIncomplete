@@ -1,5 +1,6 @@
 
 package employee;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -29,20 +30,26 @@ public class Employee {
             } 
         }
         
-        int[] employeeTotalHours = employeeObject.calculateTotalHours(employeeHours, employeeNumber);
+        int[][] employeeTotalHours = employeeObject.calculateTotalHours(employeeHours, employeeNumber);
         
-        System.out.println(employeeTotalHours);
+        for(int employee = employeeTotalHours.length - 1; employee > -1; employee--){
+            System.out.println("Employee " + employeeTotalHours[employee][0] + " total hours is " + employeeTotalHours[employee][1]);
+        }
     }
     
-    public int[] calculateTotalHours(int[][] employeeHours, int employeeNumber) {
+    public int[][] calculateTotalHours(int[][] employeeHours, int employeeNumber) {
         
-        int[] employeeTotalHours = new int[employeeNumber];
+        int[][] employeeTotalHours = new int[employeeNumber][2];
         
         for(int employee = 0; employee < employeeNumber; employee++){
-            employeeTotalHours[employee] = employeeHours[employee][0] + employeeHours[employee][1] + employeeHours[employee][2] + 
-                                           employeeHours[employee][3] + employeeHours[employee][4] + employeeHours[employee][5] +
-                                           employeeHours[employee][6]; 
+            employeeTotalHours[employee][0] = employee;
+            employeeTotalHours[employee][1] = employeeHours[employee][0] + employeeHours[employee][1] + employeeHours[employee][2] + 
+                                              employeeHours[employee][3] + employeeHours[employee][4] + employeeHours[employee][5] +
+                                              employeeHours[employee][6]; 
         }
+        
+        Arrays.sort(employeeTotalHours);
+        
         return employeeTotalHours;
     }
     
