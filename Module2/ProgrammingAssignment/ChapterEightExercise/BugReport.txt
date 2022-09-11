@@ -1,1 +1,3 @@
 
+Error: Couldn't sort employeeTotalHours
+Solution: Had to use Comparator
