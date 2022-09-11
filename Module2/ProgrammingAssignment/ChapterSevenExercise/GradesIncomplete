@@ -25,7 +25,11 @@ public class Grades {
             studentScores[score] = keyboard.nextInt();
         }
         
-        grades.calculateGrades(studentScores);
+        String[] gradeStatement = grades.calculateGrades(studentScores);
+        
+        for(String statements: gradeStatement){
+            System.out.println(statements);
+        }
         
         /**System.out.print("Enter the scores of each student: ");
         String studentScoresString = keyboard.nextLine();
@@ -42,34 +46,37 @@ public class Grades {
     }
     
     public String[] calculateGrades (int[] scoreArray){
-        int[] orderedScoreArray = scoreArray;
-        Arrays.sort(orderedScoreArray);
-        int highestScore = orderedScoreArray[orderedScoreArray.length-1];
+        //int[] orderedScoreArray = scoreArray;
+        //Arrays.sort(orderedScoreArray);
+        int highestScore = 100;
         
-        for(int score: scoreArray){
-            for(int student = 0; student < scoreArray.length; student ++){
+        String[] gradeStatement = new String[scoreArray.length];
+        
+        //for(int score: scoreArray){
+            for(int student = 0; student < scoreArray.length; student++){
+                int score = scoreArray[student];
                 if(score >= highestScore-10){
-                    System.out.println("Student " + student + " score is " + score + " and grade is A.");
+                    gradeStatement[student] = ("Student " + student + " score is " + score + " and grade is A.");
                 }
                 else if(score >= highestScore-20){
-                    String gradeStatement = ("Student " + student + " score is " + score + " and grade is B.");
-                    return gradeStatement;
+                    gradeStatement[student] = ("Student " + student + " score is " + score + " and grade is B.");
+                    //return gradeStatement;
                 }
                 else if(score >= highestScore-30){
-                    String gradeStatement = ("Student " + student + " score is " + score + " and grade is C.");
-                    return gradeStatement;
+                    gradeStatement[student] = ("Student " + student + " score is " + score + " and grade is C.");
+                    //return gradeStatement;
                 }
                 else if(score >= highestScore-40){
-                    String gradeStatement = ("Student " + student + " score is " + score + " and grade is D.");
-                    return gradeStatement;
+                    gradeStatement[student] = ("Student " + student + " score is " + score + " and grade is D.");
+                   // return gradeStatement;
                 }
                 else{
-                    String gradeStatement = ("Student " + student + " score is " + score + " and grade is F.");
-                    return gradeStatement;
+                    gradeStatement[student] = ("Student " + student + " score is " + score + " and grade is F.");
+                   // return gradeStatement;
                 }
             }
-        }
-        return "1";
+        //}
+        return gradeStatement;
     }
     
     
