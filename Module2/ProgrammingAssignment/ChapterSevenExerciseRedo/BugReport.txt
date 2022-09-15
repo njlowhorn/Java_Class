@@ -1,1 +1,3 @@
 
+- Error: Was having trouble setting the size to the ArrayLists
+- Solution: Just needed to add the elements to the list
