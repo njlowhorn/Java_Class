@@ -35,8 +35,8 @@ public class GradesList {
     
     /**
      * Method that calculates grades based difference from the highest score
-     * @param scoreArray ArrayList score for each student
-     * @return ArrayList statement about score and grade for each student
+     * @param scoreArray ArrayList&lt;Integer&gt; score for each student
+     * @return ArrayList&lt;String&gt statement about score and grade for each student
      */
     public ArrayList<String> calculateGrades (ArrayList<Integer> scoreArray){
         // Creates new list, gets all values from original list, sorts from smallest to largest, then gets biggest integer
