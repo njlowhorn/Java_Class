@@ -1,0 +1,2 @@
+- Error - Couldn't add to nested linked list
+- Solution - Created a single linked list and then added that to the nested one
