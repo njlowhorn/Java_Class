@@ -1,0 +1,9 @@
+
+package gamingcomputerbuild;
+
+public class GamingComputer {
+    private String name;
+    private String manufacturingCompany;
+    private String operatingSystem;
+    private int ram;
+}
