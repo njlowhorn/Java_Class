@@ -1,0 +1,65 @@
+
+package date;
+
+import java.util.GregorianCalendar;
+
+public class MyDate {
+    private int year;
+    private int month;
+    private int day;
+    
+    GregorianCalendar calendar = new GregorianCalendar();
+
+    public MyDate() {
+        this.year = GregorianCalendar.YEAR;
+        this.month = GregorianCalendar.MONTH;
+        this.day = GregorianCalendar.DAY_OF_MONTH;
+    }//end MyDate no-arg constructor
+    
+    public MyDate(Long timeElapsed) {
+        calendar.clear();
+        calendar.setTimeInMillis(timeElapsed);
+        
+        this.year = GregorianCalendar.YEAR;
+        this.month = GregorianCalendar.MONTH;
+        this.day = GregorianCalendar.DAY_OF_MONTH;
+    }//end MyDate timeElapsed constructor
+    
+    public MyDate(int year, int month, int day) {
+        this.year = year;
+        this.month = month;
+        this.day = day;
+    }//end MyDate constructor
+
+    public int getYear() {
+        return year;
+    }//end getYear
+
+    public int getMonth() {
+        return month;
+    }//end getMonth
+
+    public int getDay() {
+        return day;
+    }//end getDay
+    
+    public void setDate(long elapsedTime){
+        this.calendar.setTimeInMillis(elapsedTime);
+        
+        //this.year = calendar.YEAR;
+        //this.month = GregorianCalendar.MONTH;
+        //this.day = GregorianCalendar.DAY_OF_MONTH;
+    }//end setDate
+
+
+    @Override
+    public String toString() {
+        String date = calendar.get(this.year) + " ";
+        date += calendar.get(this.month) + " "; 
+        date += calendar.get(this.day);
+        return date;
+    }//end toString
+    
+    
+    
+}//end MyDate class
