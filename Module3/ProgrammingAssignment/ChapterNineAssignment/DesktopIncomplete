@@ -8,7 +8,7 @@ public class Desktop extends GamingComputer{
     public Desktop() {
     }//ends Destop empty constructor
 
-    public Desktop(String name, String manufacturingCompany, boolean comesWithMonitor) {
+    public Desktop(String name, ManufacturingCompany manufacturingCompany, boolean comesWithMonitor) {
         super(name, manufacturingCompany);
         this.comesWithMonitor = comesWithMonitor;
     }//ends Destop constructor
