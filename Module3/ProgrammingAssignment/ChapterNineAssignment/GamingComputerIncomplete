@@ -1,23 +1,42 @@
 
 package gamingcomputerbuild;
 
+/**
+ * A class that has the information on different gaming computers
+ * @author Nolan Lowhorn
+ */
 public class GamingComputer {
     private String name;
-    private String manufacturingCompany;
+    private ManufacturingCompany manufacturingCompany;
     private String operatingSystem;
     private String processor;
     private String graphicsCard;
     private int randomAccessMemory;
     private int storage;
 
+    /**
+     * Default constructor
+     */
     public GamingComputer() {
     }//end GamingComputer empty constructor
 
-    public GamingComputer(String name, String manufacturingCompany) {
+    /**
+     * Constructor for getting the name and company of the computer
+     * @param name String - Official title of the computer
+     * @param manufacturingCompany String - Manufacturer that made the computer
+     */
+    public GamingComputer(String name, ManufacturingCompany manufacturingCompany) {
         this.name = name;
         this.manufacturingCompany = manufacturingCompany;
     }//end GamingComputer constructor
 
+    /**
+     * Constructor for getting the specifications of the computer
+     * @param processor String - CPU of the computer
+     * @param graphicsCard String - GPU of the computer
+     * @param randomAccessMemory int - RAM in GB
+     * @param storage int - Amount of space in GB
+     */
     public GamingComputer(String processor, String graphicsCard, int randomAccessMemory, int storage) {
         this.processor = processor;
         this.graphicsCard = graphicsCard;
@@ -26,26 +45,51 @@ public class GamingComputer {
     }//end GamingComputer constructor
     
 
+    /**
+     * Method that returns the name of the computer
+     * @return Name of computer
+     */
     public String getName() {
         return name;
     }//end getName
 
+    /**
+     * Method that changes the name of the computer
+     * @param name String - Name of computer
+     */
     public void setName(String name) {
         this.name = name;
     }//end setName
 
-    public String getManufacturingCompany() {
+    
+    /**
+     * Method that returns the name of the manufacturing company
+     * @return Name of manufacturing company
+     */
+    public ManufacturingCompany getManufacturingCompany() {
         return manufacturingCompany;
     }//end getManufacturingCompany
 
-    public void setManufacturingCompany(String manufacturingCompany) {
+    /**
+     * Method that changes the name of the manufacturing company
+     * @param manufacturingCompany ManufacturingCompany - Name of manufacturing company
+     */
+    public void setManufacturingCompany(ManufacturingCompany manufacturingCompany) {
         this.manufacturingCompany = manufacturingCompany;
     }//end setManufacturingCompany
 
+    /**
+     * Method that returns the name of the operating system
+     * @return Name of operating system
+     */
     public String getOperatingSystem() {
         return operatingSystem;
     }//end getOperatingSystem
 
+    /**
+     * Method that changes the name of the operating system
+     * @param operatingSystem String - Name of operating system
+     */
     public void setOperatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
     }//end setOperatingSystem
@@ -84,7 +128,7 @@ public class GamingComputer {
 
     @Override
     public String toString() {
-        String description = "The " + this.getManufacturingCompany() + " ";
+        String description = "The " + this.getManufacturingCompany().name() + " ";
         description += this.getName() + " has a ";
         description += this.getProcessor() + ", a ";
         description += this.getGraphicsCard() + ", ";
@@ -96,7 +140,7 @@ public class GamingComputer {
     @Override
     public boolean equals(Object obj) {
          GamingComputer gc2 = (GamingComputer)obj;
-         return (this.getName().equals(gc2.getName()) && this.getManufacturingCompany().equals(gc2.getManufacturingCompany()));
+         return (this.getName().equals(gc2.getName()) && this.getManufacturingCompany().name().equals(gc2.getManufacturingCompany().name()));
     }//ends equals
     
     
