@@ -1,10 +1,5 @@
-
 package gamingcomputerbuild;
 
-/**
- *
- * @author Nolan Lowhorn
- */
 public class GamingComputerBuild {
 
     public static void main(String[] args) {
