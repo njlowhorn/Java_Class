@@ -1,8 +1,7 @@
-
 package gamingcomputerbuild;
 
 /**
- * A class that has the information on different gaming computers
+ * A parent class that has the information on different gaming computers
  * @author Nolan Lowhorn
  */
 public class GamingComputer {
@@ -23,7 +22,7 @@ public class GamingComputer {
     /**
      * Constructor for getting the name and company of the computer
      * @param name String - Official title of the computer
-     * @param manufacturingCompany String - Manufacturer that made the computer
+     * @param manufacturingCompany ManufacturingCompany - Manufacturer that made the computer
      */
     public GamingComputer(String name, ManufacturingCompany manufacturingCompany) {
         this.name = name;
@@ -47,7 +46,7 @@ public class GamingComputer {
 
     /**
      * Method that returns the name of the computer
-     * @return Name of computer
+     * @return String - Name of computer
      */
     public String getName() {
         return name;
@@ -64,7 +63,7 @@ public class GamingComputer {
     
     /**
      * Method that returns the name of the manufacturing company
-     * @return Name of manufacturing company
+     * @return ManufacturingCompany - Name of manufacturing company
      */
     public ManufacturingCompany getManufacturingCompany() {
         return manufacturingCompany;
@@ -80,7 +79,7 @@ public class GamingComputer {
 
     /**
      * Method that returns the name of the operating system
-     * @return Name of operating system
+     * @return String - Name of operating system
      */
     public String getOperatingSystem() {
         return operatingSystem;
@@ -94,38 +93,75 @@ public class GamingComputer {
         this.operatingSystem = operatingSystem;
     }//end setOperatingSystem
 
+    /**
+     * Method that returns the name of the processor
+     * @return String - Name of processor
+     */
     public String getProcessor() {
         return processor;
     }//end getProcessor
 
+    
+    /**
+     * Method that changes the name of the processor
+     * @param processor String - Name of processor
+     */
     public void setProcessor(String processor) {
         this.processor = processor;
     }//end setProcessor
 
+    /**
+     * Method that returns the name of the graphics card
+     * @return String - Name of graphics card
+     */
     public String getGraphicsCard() {
         return graphicsCard;
     }//end getGraphicsCard
 
+    /**
+     * Method that changes the name of the graphics card
+     * @param graphicsCard String - Name of graphics card
+     */
     public void setGraphicsCard(String graphicsCard) {
         this.graphicsCard = graphicsCard;
     }//end setGraphicsCard
 
+    /**
+     * Method that returns the amount of RAM
+     * @return int - Amount of RAM in GB
+     */
     public int getRandomAccessMemory() {
         return randomAccessMemory;
     }//end getRandomAccessMemory
 
+    /**
+     * Method that changes the amount of RAM
+     * @param randomAccessMemory int - Amount of RAM in GB
+     */
     public void setRandomAccessMemory(int randomAccessMemory) {
         this.randomAccessMemory = randomAccessMemory;
     }//end setRandomAccessMemory
 
+    /**
+     * Method that returns the amount of storage
+     * @return int - Amount of storage in GB
+     */
     public int getStorage() {
         return storage;
     }//end getStorage
 
+    /**
+     * Method that changes the amount of storage
+     * @param storage int - Amount of storage in GB
+     */
     public void setStorage(int storage) {
         this.storage = storage;
     }//end setStorage
 
+    /**
+     * Override method that specifically describes the aspects of the computer
+     * @return String - Description of computer
+     */
     @Override
     public String toString() {
         String description = "The " + this.getManufacturingCompany().name() + " ";
@@ -133,17 +169,19 @@ public class GamingComputer {
         description += this.getProcessor() + ", a ";
         description += this.getGraphicsCard() + ", ";
         description += this.getStorage() + " GB of storage, and ";
-        description += this.getRandomAccessMemory() + " GB of ram.";
+        description += this.getRandomAccessMemory() + " GB of RAM.";
         return description;
     }//end toString
 
+    /**
+     * Override method that returns if two computers have the same name and manufacturing company
+     * @param obj - Computer that is being compared to
+     * @return boolean - If the name and manufacturing company are equal
+     */
     @Override
     public boolean equals(Object obj) {
          GamingComputer gc2 = (GamingComputer)obj;
          return (this.getName().equals(gc2.getName()) && this.getManufacturingCompany().name().equals(gc2.getManufacturingCompany().name()));
     }//ends equals
-    
-    
-    
-    
+
 }// end GmaingComputer class
