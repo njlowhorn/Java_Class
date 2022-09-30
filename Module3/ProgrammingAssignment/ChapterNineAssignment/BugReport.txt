@@ -1,0 +1,2 @@
+Error: Couldn't get the toString method from GamingComputer to Desktop and add to it
+Solution; Had to use super
