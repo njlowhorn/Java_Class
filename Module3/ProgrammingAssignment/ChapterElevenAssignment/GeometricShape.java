@@ -1,12 +1,7 @@
-
 package geometricshape;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Nolan Lowhorn
- */
 public class GeometricShape {
 
     public static void main(String[] args) {
