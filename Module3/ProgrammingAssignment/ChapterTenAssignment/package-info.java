@@ -1,4 +1,4 @@
 /**
- * Program for creating date objects
+ * Program for creating date instances 
  */
 package date;
