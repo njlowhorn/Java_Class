@@ -1,10 +1,5 @@
-
 package date;
 
-/**
- *
- * @author Nolan Lowhorn
- */
 public class Date {
 
     public static void main(String[] args) {
@@ -13,6 +8,6 @@ public class Date {
         
         System.out.println(date1);
         System.out.println(date2);
-    }
+    }//end main
     
-}
+}//end Date class
