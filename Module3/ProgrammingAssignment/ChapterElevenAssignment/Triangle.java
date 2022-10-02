@@ -82,7 +82,7 @@ public class Triangle extends GeometricObject{
         return "Triangle: side1 = " + side1 + 
                " side2 = " + side2 +
                " side3 = " + side3;
-    }//emd toString
+    }//end toString
     
     
 }//end Triangle class
