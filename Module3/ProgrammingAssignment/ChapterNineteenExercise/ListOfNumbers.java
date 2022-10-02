@@ -36,7 +36,7 @@ public class ListOfNumbers {
     /**
      * Method that gets the maximum number
      * @param <E> E - Any element
-     * @param list - Any array of elements
+     * @param list E[] - Any array of elements
      * @return E - Maximum value of array
      */
     public static <E extends Comparable<E>> E max(E[] list){
