@@ -77,10 +77,6 @@ public class MyDate {
      */
     public void setDate(long elapsedTime){
         this.calendar.setTimeInMillis(elapsedTime);
-        
-        //this.year = calendar.YEAR;
-        //this.month = GregorianCalendar.MONTH;
-        //this.day = GregorianCalendar.DAY_OF_MONTH;
     }//end setDate
 
     /**
