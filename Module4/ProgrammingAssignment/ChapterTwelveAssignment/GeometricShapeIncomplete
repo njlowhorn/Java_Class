@@ -1,0 +1,12 @@
+
+package geometricshape;
+
+
+public class GeometricShape {
+
+
+    public static void main(String[] args) {
+        
+    }
+    
+}
