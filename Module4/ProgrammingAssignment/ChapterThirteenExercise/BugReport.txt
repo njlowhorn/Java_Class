@@ -1,0 +1,2 @@
+Error: Couldn't use .equals() with the areas
+Solution: Had to use compareTo() and check if the return was 0 or not
