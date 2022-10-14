@@ -1,0 +1,27 @@
+
+package binaryexception;
+
+import java.util.Scanner;
+
+
+public class BinaryException {
+
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        BinaryToDecimal binaryToDecimal = new BinaryToDecimal();
+        
+        System.out.print("Enter a binary number: ");
+        String binary = keyboard.next();
+        
+        try{
+            
+        }
+        catch(BinaryFormatException e){
+            
+        }
+    }//end main
+    
+    public class BinaryFormatException extends NumberFormatException{
+        public BinaryFormatException
+    }
+}//end BinaryException
