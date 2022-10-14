@@ -1,0 +1,26 @@
+
+package binaryexception;
+
+/**
+ * A class that has a method for converting a string of binary to a decimal number
+ * @author Nolan Lowhorn
+ */
+public class BinaryToDecimal {
+
+    /**
+     * Default constructor
+     */
+    public BinaryToDecimal() {
+    }//end constructor
+    
+    
+    /**
+     * Method that converts a string of binary to a decimal number
+     * @param binaryString String - A string of binary
+     * @return double - A decimal number
+     */
+    public double bin2Dec (String binaryString){
+        //Integer.parseInt(binaryString, 2);
+        return (double)(Integer.parseInt(binaryString, 2));
+    }//end bin2Dec method
+}//end BinaryToDecimal class
