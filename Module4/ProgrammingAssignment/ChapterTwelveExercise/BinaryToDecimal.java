@@ -15,7 +15,7 @@ public class BinaryToDecimal {
     
     
     /**
-     * Method that checks if a each character in a string represents a binary; if it does, the method converts the string into a decimal number 
+     * Method that checks if each character in a string represents a binary; if it does, the method converts the string into a decimal number 
      * @param binaryString String - A string of binary
      * @return double - A decimal number
      */
