@@ -3,7 +3,6 @@ package binaryexception;
 
 import java.util.Scanner;
 
-
 public class BinaryException {
 
     public static void main(String[] args) {
@@ -14,14 +13,10 @@ public class BinaryException {
         String binary = keyboard.next();
         
         try{
-            
-        }
+            System.out.println(binaryToDecimal.bin2Dec(binary));
+        }//end try
         catch(BinaryFormatException e){
-            
-        }
+            System.out.println(e.getMessage());
+        }//end catch
     }//end main
-    
-    public class BinaryFormatException extends NumberFormatException{
-        public BinaryFormatException
-    }
-}//end BinaryException
+}//end BinaryException class
