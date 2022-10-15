@@ -15,12 +15,17 @@ public class BinaryToDecimal {
     
     
     /**
-     * Method that converts a string of binary to a decimal number
+     * Method that checks if a each character in a string represents a binary; if it does, the method converts the string into a decimal number 
      * @param binaryString String - A string of binary
      * @return double - A decimal number
      */
     public double bin2Dec (String binaryString){
-        //Integer.parseInt(binaryString, 2);
+        char[] binaryArray = binaryString.toCharArray();
+        for(int i = 0; i < binaryArray.length; i++){
+            if(binaryArray[i] != '0' && binaryArray[i] != '1'){
+                throw new BinaryFormatException(binaryString);
+            }//end if
+        }//end for
         return (double)(Integer.parseInt(binaryString, 2));
     }//end bin2Dec method
 }//end BinaryToDecimal class
