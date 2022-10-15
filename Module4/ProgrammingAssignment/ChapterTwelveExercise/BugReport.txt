@@ -1,0 +1,2 @@
+Error - Had issues with checking the binary string in the BinaryFormatException class
+Solution - Had to do it in the bin2Dec method
