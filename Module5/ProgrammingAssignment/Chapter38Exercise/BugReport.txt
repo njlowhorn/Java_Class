@@ -1,0 +1,2 @@
+Error: Couldn't connect to the database
+Solution: Had to force the driver to register itself before making a connection
