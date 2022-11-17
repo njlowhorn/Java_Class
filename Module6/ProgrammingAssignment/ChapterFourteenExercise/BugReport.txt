@@ -1,0 +1,2 @@
+- Error: Couldn't load in the images
+- Solution: Had to clean the project after changing the directory; Load in the image, create an imageview, and set the view to the image
