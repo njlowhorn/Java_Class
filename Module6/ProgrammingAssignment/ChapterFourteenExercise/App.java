@@ -13,10 +13,15 @@ import javafx.stage.Stage;
 
 
 /**
- * JavaFX App
+ * A GUI with four different flags
+ * @author Nolan Lowhorn
  */
 public class App extends Application {
 
+    /**
+     * Creates a window for four different images
+     * @param stgMain Stage - Holds everything in the window
+     */
     @Override
     public void start(Stage stgMain) {
         
@@ -72,6 +77,10 @@ public class App extends Application {
         stgMain.show();
     }//end start
     
+    /**
+     * Closes the window
+     * @param stgMain Stage - Holds everything in the window
+     */
     public void exit(Stage stgMain){
         stgMain.close();
     }//end exit
