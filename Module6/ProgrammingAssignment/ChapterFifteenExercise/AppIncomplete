@@ -1,0 +1,48 @@
+package com.mycompany.investmentcalculator;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+
+/**
+ * JavaFX App
+ */
+public class App extends Application {
+
+    @Override
+    public void start(Stage stgMain) {
+        
+        Label lblInvest = new Label("Investment Amount: ");
+        Label lblYear = new Label("Number of Years: ");
+        Label lblRate = new Label("Annual Interest Rate: ");
+        Label lblValue = new Label("Future value: ");
+        
+        TextField txtInvest = new TextField();
+        TextField txtYear = new TextField();
+        TextField txtRate = new TextField();
+        TextField txtValue = new TextField();
+        
+        VBox vbxLabels = new VBox(lblInvest, lblYear, lblRate, lblValue);
+        VBox vbxFields = new VBox(txtInvest, txtYear, txtRate, txtValue);
+        
+        HBox hbxEverything = new HBox(vbxLabels, vbxFields);
+        
+        Pane pnMain = new Pane();
+        pnMain.getChildren().addAll(hbxEverything);
+        Scene scnMain = new Scene(pnMain, 300, 200);
+        
+        stgMain.setScene(scnMain);
+        stgMain.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+
+}
