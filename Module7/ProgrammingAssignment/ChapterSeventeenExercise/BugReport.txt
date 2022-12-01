@@ -1,0 +1,2 @@
+Error: Could find the test.txt file
+Solution: Had to place file in the root folder of the project
