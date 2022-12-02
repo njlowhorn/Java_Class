@@ -1,29 +1,11 @@
-
 package guessingcapitals;
 
 import java.util.LinkedList;
 
-/**
- *
- * @author Nolan Lowhorn
- */
 public class GuessingCapitals {
 
     public static void main(String[] args) {
         LinkedList<LinkedList<String>> capitals = new LinkedList<>();
-        
-        LinkedList<String> temp = new LinkedList<>();
-        
-        temp.add("a");
-        temp.add("B");
-        
-        LinkedList<String> temp2 = new LinkedList<>();
-        
-        temp2.add("f");
-        temp2.add("z");
-        
-        capitals.add(temp);
-        capitals.add(temp2);
         
         CapitalsGame cg = new CapitalsGame(capitals);
         
