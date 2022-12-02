@@ -1,0 +1,2 @@
+Error: The Scanner kept on skipping input lines after an answer with spaces
+Solution: Had to use nextLine(), instead of next()
