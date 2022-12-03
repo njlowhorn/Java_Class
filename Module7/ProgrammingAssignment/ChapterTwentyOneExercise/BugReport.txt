@@ -1,0 +1,2 @@
+Error: Couldn't iterate through the map
+Solution: Had to get the entries of the map and iterate through the set of entries
