@@ -1,0 +1,20 @@
+
+package listsum;
+
+import java.util.concurrent.ForkJoinPool;
+
+
+public class ListSum {
+
+
+    public static void main(String[] args) {
+        int size = 7000000;
+        double[] list1 = new double[size];
+    }//end main
+    
+    public static double parallelSum(double[] list){
+        ForkJoinPool fjp = new ForkJoinPool();
+        fjp.execute(task);
+    }//end parallelSum
+    
+}//end ListSum class
