@@ -1,0 +1,82 @@
+
+package listsum;
+
+import java.util.concurrent.RecursiveAction;
+
+/**
+ *
+ * @author Nolan Lowhorn
+ */
+public class SumTask extends RecursiveAction{
+    private int threshold;
+    private double[] list;
+
+    /**
+     * Default constructor
+     */
+    public SumTask() {
+    }//end constructor
+
+    /**
+     * Constructor with all information
+     * @param threshold int - Size of what the list will be split into
+     * @param list double[] - List of doubles
+     */
+    public SumTask(int threshold, double[] list) {
+        this.threshold = threshold;
+        this.list = list;
+    }//end constructor
+
+    /**
+     * Method that returns the size of what the list will be split into
+     * @return int - Size of what the list will be split into
+     */
+    public int getThreshold() {
+        return threshold;
+    }//end getThreshold
+
+    /**
+     * Method that changes the size of what the list will be split into
+     * @param threshold int - Size of what the list will be split into
+     */
+    public void setThreshold(int threshold) {
+        this.threshold = threshold;
+    }//end setThreshold
+
+    /**
+     * Method that returns the list of doubles
+     * @return double[] - List of doubles
+     */
+    public double[] getList() {
+        return list;
+    }//end getList
+
+    /**
+     * Method that changes the list of doubles
+     * @param list double[] - List of doubles
+     */
+    public void setList(double[] list) {
+        this.list = list;
+    }//end setList
+    
+    
+    public double findSum(double[] list){
+        double sum = 0;
+        for (double value : list) {
+            sum += value;
+        }//end for
+        return sum;
+    }//end findSum
+
+    @Override
+    protected void compute() {
+        SumTask st = new SumTask();
+        if(list.length < threshold){
+            st.findSum(list);
+        }//end if
+        else{
+            
+        }//end else
+    }//end compute
+    
+}//end SumTask class
