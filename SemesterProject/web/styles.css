@@ -1,0 +1,28 @@
+
+/* 
+    Created on : Oct 18, 2022, 6:19:04 PM
+    Author     : nolan
+*/
+
+div.stars {
+    width: 120px;
+}
+
+input.star { 
+    display: none; 
+}
+
+label.star {
+    float: right;
+    font-size: 25px;
+}
+
+input.star:checked ~ label.star:after {
+    content: "\f005";
+    color: gold;
+}
+
+label.star:after {
+    content: "\f006";
+    font-family: FontAwesome;
+}
