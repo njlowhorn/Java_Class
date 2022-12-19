@@ -1,0 +1,20 @@
+Error - Couldn't display page information based on type of media
+Solution - Had to use javascript to get the information based on ID
+Error - Couldn't send ID information to other page
+Solution - Had to use a hidden input in the forms and a hidden input in the next page to receive the ID
+Error - Kept on adding to the database when entering the page
+Solution - Had to check if the parameters weren't null
+Error - Couldn't check whether or not the username/password information was correct
+Solution - Had to create a verification page
+Error - Couldn't maintain the user info throughout website
+Solution - Had to user session.get/setAttribute
+Error - Input form was removing everything after first word when value was from jsp
+Solution - Had to use quotation marks around the jsp value
+Error - Couldn't display CSS
+Solution - Had to refresh with ctrl + shift + r to show the CSS
+Error - Couldn't insert rating into the database
+Solution - Had to use a sumbit button to go to another page to process it and redirect back
+Error - Couldn't display the user's rating from previous sessions
+Solution - Had to check for each potential rating in the database
+Error - getName() was returning the name of the class with the package too
+Solution - Had to uses getSimpleName() instead
